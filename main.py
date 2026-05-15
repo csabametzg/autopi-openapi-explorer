@@ -1,4 +1,6 @@
 import requests
+import csv
+
 
 def get_data():
 
@@ -89,6 +91,30 @@ def extract_endpoint_summaries(data):
     return endpoint_summaries
 
 
+def export_to_markdown(endpoint_summaries):
+    with open("endpoints.md", mode="w", encoding="utf-8") as file:
+        file.write("# AutoPi OpenAPI Endpoints\n\n")
+
+        for endpoint in endpoint_summaries:
+            methods = ", ".join(endpoint["methods"])
+
+            file.write(f"## {endpoint['path']}\n\n")
+            file.write(f"Methods: {methods}\n\n")
+
+
+def export_to_csv(endpoint_summaries):
+    with open("endpoints.csv", mode="w", newline="", encoding="utf-8") as file:
+
+        writer = csv.writer(file)
+
+        writer.writerow([("path").upper(), ("Methods").upper()])
+
+        for endpoint in endpoint_summaries:
+            methods = ", ".join(endpoint["methods"])
+            writer.writerow([endpoint["path"], methods])
+
+    
+
 
 if __name__ == "__main__":
     data = get_data()
@@ -98,3 +124,7 @@ if __name__ == "__main__":
 
         print(f"Total endpoint summaries: {len(endpoint_summaries)}")
         print(endpoint_summaries[:5])
+
+
+        export_to_markdown(endpoint_summaries)
+        export_to_csv(endpoint_summaries)

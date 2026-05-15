@@ -1,0 +1,388 @@
+PATH,METHODS
+/addons/,GET
+/addons/{id}/,GET
+/addons/{id}/install/,POST
+/addons/{id}/uninstall/,POST
+/auth/account/,"GET, PUT, PATCH"
+/auth/account/customers/,"GET, POST"
+/auth/account/customers/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/account/users/,"GET, POST"
+/auth/account/users/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/account/v2/users/,"GET, POST"
+/auth/account/v2/users/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/account/v2/users/{user_pk}/permissions/,"GET, POST"
+/auth/account/v2/users/{user_pk}/permissions/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/account/v3/users/,"GET, POST"
+/auth/account/v3/users/groups/,GET
+/auth/account/v3/users/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/account/v3/users/{user_pk}/permissions/,"GET, POST"
+/auth/account/v3/users/{user_pk}/permissions/{id}/,"GET, PUT, PATCH, DELETE"
+/auth/api_tokens/,"GET, POST"
+/auth/api_tokens/{id}/,DELETE
+/auth/featureflags/,GET
+/auth/login/,POST
+/auth/logout/,"GET, POST"
+/auth/mfa/totp-devices/,GET
+/auth/mfa/totp-devices/onboard/start/,POST
+/auth/mfa/totp-devices/{id}/disable/,POST
+/auth/mfa/totp-devices/{id}/onboard/confirm/,POST
+/auth/mfa/totp-devices/{id}/recovery_codes/regenerate/,POST
+/auth/mfa/verify/,POST
+/auth/password/change/,POST
+/auth/password/reset/,POST
+/auth/password/reset/confirm/,POST
+/auth/register/,POST
+/auth/register/verify-email/,POST
+/auth/resend-confirm-email/,POST
+/auth/user/,"GET, PUT, PATCH"
+/automation/fields,GET
+/automation/tags,GET
+/automation/triggers/,"GET, POST"
+/automation/triggers/{id}/,"GET, PUT, PATCH, DELETE"
+/automation/triggers/{id}/test/,POST
+/batch/,POST
+/billing/settlements/,GET
+/billing/subscriptions/active_summary/,GET
+/can_logging/channels/,"GET, POST"
+/can_logging/channels/meta/,GET
+/can_logging/channels/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/channels/{id}/reset/,POST
+/can_logging/dbc/collections/,GET
+/can_logging/decoders/,"GET, POST"
+/can_logging/decoders/message_definitions/,GET
+/can_logging/decoders/meta/,GET
+/can_logging/decoders/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/decoders/{uuid}/message_definition_library/,GET
+/can_logging/event_reactors/,"GET, POST"
+/can_logging/event_reactors/event_tags/,GET
+/can_logging/event_reactors/meta/,GET
+/can_logging/event_reactors/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/frame_listeners/,"GET, POST"
+/can_logging/frame_listeners/meta/,GET
+/can_logging/frame_listeners/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/import/dbc/,POST
+/can_logging/loggers/,"GET, POST"
+/can_logging/loggers/meta/,GET
+/can_logging/loggers/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/output_handlers/,"GET, POST"
+/can_logging/output_handlers/meta/,GET
+/can_logging/output_handlers/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/pgns/,GET
+/can_logging/pgns/{id}/,GET
+/can_logging/pids/,GET
+/can_logging/pids/{id}/,GET
+/can_logging/queries/,"GET, POST"
+/can_logging/queries/meta/,GET
+/can_logging/queries/{id}/,"GET, PUT, PATCH, DELETE"
+/can_logging/query_collections/,"GET, POST"
+/can_logging/workflow_hooks/,"GET, POST"
+/can_logging/workflow_hooks/create-default/,POST
+/can_logging/workflow_hooks/meta/,GET
+/can_logging/workflow_hooks/{id}/,"GET, PUT, PATCH, DELETE"
+/dashboard/customer_layout/,"GET, POST"
+/dashboard/customer_layout/fetch_related/,GET
+/dashboard/customer_layout/{id}/,"GET, PUT, PATCH, DELETE"
+/dashboard/customer_layout/{id}/copy_to_user/,POST
+/dashboard/customer_layout/{id}/duplicate/,POST
+/dashboard/layout/,"GET, POST"
+/dashboard/layout/{id}/,"GET, PUT, PATCH, DELETE"
+/dashboard/layout/{id}/duplicate/,POST
+/dashboard/map_overlays/,GET
+/dashboard/map_overlays/{id}/,GET
+/dashboard/map_overlays/{id}/download/{field_name}/,GET
+/docker/projects/,"GET, POST"
+/docker/projects/{id}/,"GET, PUT, PATCH, DELETE"
+/docker/projects/{project_pk}/releases/,"GET, POST"
+/docker/projects/{project_pk}/releases/active/,GET
+/docker/projects/{project_pk}/releases/{id}/,"GET, PUT, PATCH"
+/docker/projects/{project_pk}/releases/{release_pk}/deployments/,GET
+/docker/registries/,"GET, POST"
+/docker/registries/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/alerts/,GET
+/dongle/alerts/choices/,GET
+/dongle/alerts/clear/,POST
+/dongle/alerts/dismiss/,POST
+/dongle/alerts/{id}/,DELETE
+/dongle/alerts/{id}/dismiss/,POST
+/dongle/devices/,GET
+/dongle/devices/batch_cancel_scheduled_update/,POST
+/dongle/devices/batch_schedule_update/,POST
+/dongle/devices/by_eth_address/{eth_address}/,GET
+/dongle/devices/by_unit_id/{unit_id}/,GET
+/dongle/devices/devices_lean/,GET
+/dongle/devices/devices_lean_paged/,GET
+/dongle/devices/hw_board_versions/,GET
+/dongle/devices/lookup/,POST
+/dongle/devices/move_devices/,POST
+/dongle/devices/release_versions/,GET
+/dongle/devices/{device_pk}/accesstokens/,"GET, POST"
+/dongle/devices/{device_pk}/accesstokens/{id}/,GET
+/dongle/devices/{device_pk}/accesstokens/{id}/decrypt/,POST
+/dongle/devices/{device_pk}/alerts/,GET
+/dongle/devices/{device_pk}/alerts/choices/,GET
+/dongle/devices/{device_pk}/alerts/dismiss/,POST
+/dongle/devices/{device_pk}/alerts/resolve/,POST
+/dongle/devices/{device_pk}/alerts/summary/,GET
+/dongle/devices/{device_pk}/alerts/{id}/dismiss/,POST
+/dongle/devices/{device_pk}/alerts/{id}/resolve/,POST
+/dongle/devices/{device_pk}/can_logging/channels/,GET
+/dongle/devices/{device_pk}/environment_variables/,"GET, POST"
+/dongle/devices/{device_pk}/environment_variables/merged/,GET
+/dongle/devices/{device_pk}/environment_variables/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/devices/{device_pk}/environment_variables/{id}/override/,POST
+/dongle/devices/{device_pk}/pending_syncs/,GET
+/dongle/devices/{device_pk}/pending_syncs/{id}/,DELETE
+/dongle/devices/{id}/,"GET, PUT, PATCH"
+/dongle/devices/{id}/accept_key/,POST
+/dongle/devices/{id}/callback/{jid}/,GET
+/dongle/devices/{id}/cancel_scheduled_update/,POST
+/dongle/devices/{id}/command_result/{jid}/,GET
+/dongle/devices/{id}/data_usage/,GET
+/dongle/devices/{id}/delete_denied_key/,POST
+/dongle/devices/{id}/execute/,POST
+/dongle/devices/{id}/execute_raw/,POST
+/dongle/devices/{id}/explicit_permissions/,GET
+/dongle/devices/{id}/factory_reset/,POST
+/dongle/devices/{id}/regenerate_token/,POST
+/dongle/devices/{id}/schedule_update/,POST
+/dongle/devices/{id}/wake/,POST
+/dongle/engines/,"GET, POST"
+/dongle/engines/by_name/{name}/,"GET, PUT, PATCH"
+/dongle/engines/meta/,GET
+/dongle/engines/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/engines/{id}/render_settings_preview/,GET
+/dongle/environment_variables/,"GET, POST"
+/dongle/environment_variables/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/export/export_csv/,GET
+/dongle/geofences/,"GET, POST"
+/dongle/geofences/get_all_geofences/,GET
+/dongle/geofences/templated/,GET
+/dongle/geofences/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/hooks/,"GET, POST"
+/dongle/hooks/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/jobs/,"GET, POST"
+/dongle/jobs/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/mini/geofences/,"GET, POST"
+/dongle/mini/geofences/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/modules/,"GET, POST"
+/dongle/modules/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/pending_syncs/,GET
+/dongle/pending_syncs/{id}/,DELETE
+/dongle/reactors/,"GET, POST"
+/dongle/reactors/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/settings/,"GET, POST"
+/dongle/settings/schema/,GET
+/dongle/state_runs/,GET
+/dongle/sync_results/,GET
+/dongle/tags/,GET
+/dongle/templates/,"GET, POST"
+/dongle/templates/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/templates/{id}/apply/,POST
+/dongle/templates/{id}/apply_async/,POST
+/dongle/templates/{id}/apply_explicit/,POST
+/dongle/templates/{id}/apply_explicit_async/,POST
+/dongle/templates/{id}/duplicate/,POST
+/dongle/templates/{id}/unassociate_devices/,POST
+/dongle/templates/{template_pk}/can_logging/channels/,GET
+/dongle/templates/{template_pk}/devices/,GET
+/dongle/update_logs/,GET
+/dongle/update_logs/{id}/,GET
+/dongle/workers/,"GET, POST"
+/dongle/workers/{id}/,"GET, PUT, PATCH, DELETE"
+/dongle/{unit_id}/device/refresh_pillar/,POST
+/dongle/{unit_id}/execute/,POST
+/dongle/{unit_id}/execute_raw/,POST
+/dongle/{unit_id}/obd/bus/{bus_id}/can/db/,GET
+/dongle/{unit_id}/obd/commands/,GET
+/dongle/{unit_id}/obd/dtc/,GET
+/dongle/{unit_id}/obd/dtc/clear/,POST
+/dongle/{unit_id}/obd/query/{command}/,POST
+/dongle/{unit_id}/retrieve_job/{jid}/,GET
+/dongle/{unit_id}/salt/engines/,GET
+/dongle/{unit_id}/salt/geofence/,GET
+/dongle/{unit_id}/salt/schedule/,GET
+/fleet/alerts/,GET
+/fleet/alerts/choices/,GET
+/fleet/alerts/dismiss/,POST
+/fleet/alerts/resolve/,POST
+/fleet/alerts/summary/,GET
+/fleet/alerts/{id}/dismiss/,POST
+/fleet/alerts/{id}/resolve/,POST
+/fleet/geofences/,"GET, POST"
+/fleet/geofences/{fleetgeofence_pk}/vehicle-groups/,GET
+/fleet/geofences/{fleetgeofence_pk}/vehicle-groups/modify/,POST
+/fleet/geofences/{fleetgeofence_pk}/vehicles/,GET
+/fleet/geofences/{fleetgeofence_pk}/vehicles/modify/,POST
+/fleet/geofences/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/locations/,"GET, POST"
+/fleet/locations/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/notification_channels/,"GET, POST"
+/fleet/notification_channels/{id}/,"PUT, PATCH, DELETE"
+/fleet/notification_channels/{id}/test_notification_channel/,GET
+/fleet/notification_types/,GET
+/fleet/templates/,"GET, POST"
+/fleet/templates/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/templates/{id}/apply/,POST
+/fleet/templates/{id}/apply_async/,POST
+/fleet/templates/{id}/apply_explicit/,POST
+/fleet/templates/{id}/apply_explicit_async/,POST
+/fleet/templates/{id}/duplicate/,POST
+/fleet/templates/{id}/unassociate_devices/,POST
+/fleet/vehicle-groups-list/,GET
+/fleet/vehicle_fleet_states/,"GET, POST"
+/fleet/vehicle_fleet_states/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/vehicle_states/,"GET, POST"
+/fleet/vehicle_states/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/vehicles-list/,GET
+/fleet/vehicles/,"GET, POST"
+/fleet/vehicles/archived/,GET
+/fleet/vehicles/assign_users/,POST
+/fleet/vehicles/create_default_fleet_states/,POST
+/fleet/vehicles/create_default_vehicle_states/,POST
+/fleet/vehicles/fleet_states/,GET
+/fleet/vehicles/import_batch_edit/,POST
+/fleet/vehicles/import_csv/,POST
+/fleet/vehicles/states/,GET
+/fleet/vehicles/{id}/,"GET, PUT, PATCH, DELETE"
+/fleet/vehicles/{id}/fleet_states/,GET
+/fleet/vehicles/{id}/rewards/,GET
+/fleet/vehicles/{id}/states/,GET
+/fleet/vehicles/{vehicle_pk}/alert_summary/,GET
+/fleet/vehicles/{vehicle_pk}/alerts/,GET
+/fleet/vehicles/{vehicle_pk}/alerts/choices/,GET
+/fleet/vehicles/{vehicle_pk}/alerts/dismiss/,POST
+/fleet/vehicles/{vehicle_pk}/alerts/resolve/,POST
+/fleet/vehicles/{vehicle_pk}/alerts/summary/,GET
+/fleet/vehicles/{vehicle_pk}/alerts/{id}/dismiss/,POST
+/fleet/vehicles/{vehicle_pk}/alerts/{id}/resolve/,POST
+/fleet/vehicles/{vehicle_pk}/data_request/,POST
+/fleet/vehicles/{vehicle_pk}/faultoccurrances/,GET
+/fleet/vehicles/{vehicle_pk}/faultoccurrances/{id}/,"GET, DELETE"
+/fleet/vehicles/{vehicle_pk}/faultoccurrances/{id}/clear/,POST
+/fleet/vehicles/{vehicle_pk}/geofence_summary/,GET
+/hub/trips/,POST
+/hub/trips/close_trip/,POST
+/hub/trips/{id}/,DELETE
+/logbook/charging_sessions/,GET
+/logbook/diagnostics/,GET
+/logbook/events/,GET
+/logbook/events_histogram/,GET
+/logbook/fleet_summary/alerts/,GET
+/logbook/fleet_summary/devices/,GET
+/logbook/fleet_summary/diagnostics/,GET
+/logbook/fleet_summary/geofences/,GET
+/logbook/fleet_summary/timedistance/,GET
+/logbook/fleet_summary/vehicles/,GET
+/logbook/most_recent_vehicle_positions/,GET
+/logbook/raw/,GET
+/logbook/recent_stats/,GET
+/logbook/requeue_events/,POST
+/logbook/rfid_status/,GET
+/logbook/simplified_events/,GET
+/logbook/storage/data_fields/,GET
+/logbook/storage/fields/,GET
+/logbook/storage/raw/,GET
+/logbook/storage/read/,GET
+/logbook/storage/v2/raw/,GET
+/logbook/trips/,GET
+/logbook/trips/{id}/,"GET, PUT, PATCH"
+/logbook/v2/most_recent_position/,GET
+/logbook/v2/most_recent_positions/,GET
+/logbook/v2/recent_stats/,GET
+/logbook/v2/trips/,GET
+/logbook/v2/trips/{id}/,"GET, PUT, PATCH"
+/logbook/v2/trips/{id}/edit_trip_times/,PATCH
+/obd/canmessages/,"GET, POST"
+/obd/canmessages/{canmessage_pk}/signals/,GET
+/obd/canmessages/{canmessage_pk}/signals/{id}/,DELETE
+/obd/canmessages/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/canmessages/{id}/associate_to_busses/,POST
+/obd/canmessages/{id}/associate_to_vehicle/,POST
+/obd/canmessages/{id}/buses/,GET
+/obd/canmessages/{id}/duplicate/,POST
+/obd/canmessages/{id}/pull_pending_changes/,POST
+/obd/canmessages/{id}/remove_parent_relationship/,POST
+/obd/canmessagestemplate/,"GET, POST"
+/obd/canmessagestemplate/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/canmessagestemplate/{id}/associate_to_busses/,POST
+/obd/canmessagestemplate/{id}/associate_to_vehicle/,POST
+/obd/canmessagestemplate/{id}/duplicate/,POST
+/obd/canmessagestemplate/{id}/pull_pending_changes/,POST
+/obd/canmessagestemplate/{id}/remove_parent_relationship/,POST
+/obd/community/search/,GET
+/obd/diagnostics/,GET
+/obd/faultdefinitions/,"GET, POST"
+/obd/faultdefinitions/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/faultoccurrances/,GET
+/obd/faultoccurrances/{id}/,"GET, DELETE"
+/obd/faultoccurrances/{id}/clear/,POST
+/obd/library/import/can/,POST
+/obd/library/search/,GET
+/obd/loggers/,GET
+/obd/loggers/can/,"GET, POST"
+/obd/loggers/can/{id}/,"GET, PUT, DELETE"
+/obd/loggers/mini/,"GET, POST"
+/obd/loggers/mini/{id}/,"GET, PUT, DELETE"
+/obd/loggers/pid/,"GET, POST"
+/obd/loggers/pid/{id}/,"GET, PUT, DELETE"
+/obd/loggers/restore/,POST
+/obd/mini/loggers/,"GET, POST"
+/obd/mini/loggers/{id}/,"GET, PUT, DELETE"
+/obd/mini/parameters/,GET
+/obd/mini/parameters/{id}/,GET
+/obd/pgns/,"GET, POST"
+/obd/pgns/meta/,GET
+/obd/pgns/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/pids/,"GET, POST"
+/obd/pids/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/pids/{id}/associate_to_busses/,POST
+/obd/pids/{id}/associate_to_vehicle/,POST
+/obd/pids/{id}/buses/,GET
+/obd/pids/{id}/duplicate/,POST
+/obd/pids/{id}/pull_pending_changes/,POST
+/obd/pids/{id}/remove_parent_relationship/,POST
+/obd/pidstemplate/,"GET, POST"
+/obd/pidstemplate/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/pidstemplate/{id}/associate_to_busses/,POST
+/obd/pidstemplate/{id}/associate_to_vehicle/,POST
+/obd/pidstemplate/{id}/duplicate/,POST
+/obd/pidstemplate/{id}/pull_pending_changes/,POST
+/obd/pidstemplate/{id}/remove_parent_relationship/,POST
+/obd/spns/,"GET, POST"
+/obd/spns/{id}/,"GET, PUT, PATCH, DELETE"
+/obd/supportedcanmessages/,GET
+/obd/v2/library/import/can/,POST
+/obd/v2/library/import/pid/,POST
+/reporting/reports/,"GET, POST"
+/reporting/reports/available_geofences/,GET
+/reporting/reports/unique_vehicles_count/,GET
+/reporting/reports/user_emails/,GET
+/reporting/reports/{id}/,"GET, DELETE"
+/reporting/reports/{id}/data/,GET
+/reporting/reports/{id}/download/,GET
+/reporting/reports/{id}/render/,GET
+/reporting/schedules/,"GET, POST"
+/reporting/schedules/preview/,POST
+/reporting/schedules/{id}/,"GET, PUT, PATCH, DELETE"
+/tasks/,"GET, POST"
+/tasks/enqueue_export/,POST
+/tasks/in_progress/,GET
+/tasks/{id}/,"GET, DELETE"
+/tasks/{id}/clear_result/,POST
+/tasks/{id}/progress/,GET
+/tasks/{id}/result_trip_export/,GET
+/vehicle/busses/,"GET, POST"
+/vehicle/busses/{id}/,"GET, PUT, PATCH, DELETE"
+/vehicle/group/,"GET, POST"
+/vehicle/group/vehicles/,GET
+/vehicle/group/{id}/,"GET, PUT, PATCH, DELETE"
+/vehicle/group/{id}/vehicles/,GET
+/vehicle/makes/,GET
+/vehicle/models/,GET
+/vehicle/models/{make_id}/,GET
+/vehicle/profile/,"GET, POST"
+/vehicle/profile/{id}/,"GET, PUT, PATCH, DELETE"
+/vehicle/profile/{profile_pk}/recharge_sessions/,GET
+/vehicle/profile/{profile_pk}/recharge_sessions/{id}/,GET
+/vehicle/v2/profile/,"GET, POST"
+/vehicle/v2/profile/{id}/,"GET, PUT, PATCH, DELETE"
