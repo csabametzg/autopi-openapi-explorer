@@ -1,7 +1,7 @@
 import csv
 
 def export_to_markdown(endpoint_summaries):
-    with open("endpoints.md", mode="w", encoding="utf-8") as file:
+    with open("outputs/endpoints.md", mode="w", encoding="utf-8") as file:
         file.write("# AutoPi OpenAPI Endpoints\n\n")
 
         for endpoint in endpoint_summaries:
@@ -12,7 +12,7 @@ def export_to_markdown(endpoint_summaries):
 
 
 def export_to_csv(endpoint_summaries):
-    with open("endpoints.csv", mode="w", newline="", encoding="utf-8") as file:
+    with open("outputs/endpoints.csv", mode="w", newline="", encoding="utf-8") as file:
 
         writer = csv.writer(file)
 
